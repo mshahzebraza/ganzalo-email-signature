@@ -7,29 +7,52 @@
     <style>
         .signature-container {
             font-family: 'Poppins', Arial, sans-serif;
+            max-width: 600px;
+            width: 100%;
+            color: #2B2147;
+            line-height: 1.6;
+            gap: 20px;
+            padding: 15px;
+            position: relative;
+        }
+
+        .main-container {
+            font-family: 'Poppins', Arial, sans-serif;
             max-width: 550px;
             width: 100%;
             color: #2B2147;
             line-height: 1.6;
             display: flex;
             gap: 20px;
-            padding: 15px;
+            position: relative;
         }
 
         .profile-image {
-            width: 86px;
-            height: 125px;
+            width: 125px;
+            height: 180px;
             border-radius: 8px;
             border: 1px solid rgba(220, 195, 161, 0.8);
         }
 
         .content-container {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .info-section {
+            flex: 1;
         }
 
         .name {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 20px;
+            line-height: 22px;
             margin-bottom: 2px;
             color: #2B2147;
         }
@@ -37,8 +60,8 @@
         .title {
             font-size: 14px;
             color: #EE8C3A;
-            font-weight: 500;
-            margin-bottom: 4px;
+            font-weight: 400;
+            margin-bottom: 2px;
         }
 
         .practice-areas {
@@ -51,7 +74,7 @@
         .locations {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 4px;
             margin-bottom: 12px;
             flex-wrap: wrap;
         }
@@ -60,7 +83,7 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            font-size: 12px;
+            font-size: 10px;
             color: #2B2147;
             text-decoration: none;
         }
@@ -72,6 +95,20 @@
 
         .social-badges {
             display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .awards-badges-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .videos-badges-container {
+            display: flex;
+            flex-direction: column;
             gap: 8px;
             margin-bottom: 12px;
         }
@@ -97,7 +134,9 @@
 
         .social-icons {
             display: flex;
-            gap: 12px;
+            flex-direction: column;
+            gap: 8px;
+            margin-left: 12px;
         }
 
         .social-icons a {
@@ -115,6 +154,7 @@
             opacity: 0.8;
             margin-top: 12px;
             font-style: italic;
+            /* margin-left: 120px; */
         }
 
         .divider {
@@ -127,75 +167,96 @@
 
 <body>
     <div class="signature-container">
-        <img src="https://i.ibb.co/qFYY03tZ/display-picture.jpg" alt="Nouvelle L. Gonzalo" class="profile-image">
-        <div class="content-container">
-            <div class="name">Nouvelle L. Gonzalo, Esq.</div>
-            <div class="title">Founder and Managing Attorney</div>
-            <div class="practice-areas">International | Non-Profits | Contracts | M&A</div>
+        <div class="main-container">
+            <img src="https://i.ibb.co/qFYY03tZ/display-picture.jpg" alt="Nouvelle L. Gonzalo" class="profile-image">
+            <div class="content-container">
+                <div class="main-content">
+                    <div class="info-section">
+                        <div class="name">Nouvelle L. Gonzalo, Esq.</div>
+                        <div class="title">Founder and Managing Attorney</div>
+                        <div class="practice-areas">International | Non-Profits | Contracts | M&A</div>
 
-            <div class="locations">
-                <a href="https://g.co/kgs/vgDUcPe" class="location-item">
-                    <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
-                    Miami
-                </a>
-                <span class="divider">|</span>
-                <a href="https://g.co/kgs/S851p8W" class="location-item">
-                    <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
-                    New York
-                </a>
-                <span class="divider">|</span>
-                <a href="https://g.co/kgs/jTj2vhc" class="location-item">
-                    <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
-                    Cleveland
-                </a>
-                <span class="divider">|</span>
-                <a href="https://g.co/kgs/a2TwkR7" class="location-item">
-                    <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
-                    Gainesville
-                </a>
-            </div>
+                        <div class="locations">
+                            <a href="https://g.co/kgs/vgDUcPe" class="location-item">
+                                <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
+                                Miami
+                            </a>
+                            <span class="divider">|</span>
+                            <a href="https://g.co/kgs/S851p8W" class="location-item">
+                                <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
+                                New York
+                            </a>
+                            <span class="divider">|</span>
+                            <a href="https://g.co/kgs/jTj2vhc" class="location-item">
+                                <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
+                                Cleveland
+                            </a>
+                            <span class="divider">|</span>
+                            <a href="https://g.co/kgs/a2TwkR7" class="location-item">
+                                <img src="https://i.ibb.co/0jkqzSsr/pin-icon.jpg" alt="Location">
+                                Gainesville
+                            </a>
+                        </div>
 
-            <div class="social-badges">
-                <div class="badge">
-                    <img src="https://i.ibb.co/sJWtMpRw/award-icon.jpg" alt="Super Lawyers">
-                    <span>Super Lawyers Selectee</span>
+                        <div class="social-badges">
+                            <!-- Column 1: Awards -->
+                            <div class="awards-badges-container">
+                                <div class="badge">
+                                    <img src="https://i.ibb.co/sJWtMpRw/award-icon.jpg" alt="Super Lawyers">
+                                    <span>Super Lawyers Selectee</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="https://i.ibb.co/sJWtMpRw/award-icon.jpg" alt="Super Lawyers">
+                                    <span>Super Lawyers Selectee</span>
+                                </div>
+                            </div>
+                            <!-- Column 2: Videos -->
+                            <div class="videos-badges-container">
+                                <div class="badge">
+                                    <img src="https://i.ibb.co/3m8LqhZN/play-icon.jpg" alt="Super Lawyers">
+                                    <span>Super Lawyers Selectee</span>
+                                </div>
+                                <div class="badge">
+                                    <img src="https://i.ibb.co/3m8LqhZN/play-icon.jpg" alt="Super Lawyers">
+                                    <span>Super Lawyers Selectee</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://gonzalolaw.com/" target="_blank">
+                            <img src="https://i.ibb.co/k2tW6Q3K/globe-icon.jpg" alt="Website">
+                        </a>
+                        <a href="https://www.linkedin.com/in/nouvelle-gonzalo/" target="_blank">
+                            <img src="https://i.ibb.co/4RwL7Dtp/linkedin-icon.jpg" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.instagram.com/gonzalolawpllc/" target="_blank">
+                            <img src="https://i.ibb.co/XfsmmcN5/insta-icon.jpg" alt="Instagram">
+                        </a>
+                        <a href="https://www.youtube.com/@GonzaloLawPLLC?sub_confirmation=1" target="_blank">
+                            <img src="https://i.ibb.co/qYhdqBs1/youtube-icon.jpg" alt="YouTube">
+                        </a>
+                        <a href="tel:1-855-466-9256" target="_blank">
+                            <img src="https://i.ibb.co/356yBq0D/phone-icon.jpg" alt="Phone">
+                        </a>
+                        <a href="mailto:ngonzalo@gonzalolaw.com" target="_blank">
+                            <img src="https://i.ibb.co/MvsWmCm/email-icon.jpg" alt="Email">
+                        </a>
+                    </div>
                 </div>
-                <div class="badge">
-                    <img src="https://i.ibb.co/3m8LqhZN/play-icon.jpg" alt="Bloomberg">
-                    <span>As seen on Bloomberg</span>
-                </div>
             </div>
 
-            <div class="social-icons">
-                <a href="https://gonzalolaw.com/" target="_blank">
-                    <img src="https://i.ibb.co/k2tW6Q3K/globe-icon.jpg" alt="Website">
-                </a>
-                <a href="https://www.linkedin.com/in/nouvelle-gonzalo/" target="_blank">
-                    <img src="https://i.ibb.co/4RwL7Dtp/linkedin-icon.jpg" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/gonzalolawpllc/" target="_blank">
-                    <img src="https://i.ibb.co/XfsmmcN5/insta-icon.jpg" alt="Instagram">
-                </a>
-                <a href="https://www.youtube.com/@GonzaloLawPLLC?sub_confirmation=1" target="_blank">
-                    <img src="https://i.ibb.co/qYhdqBs1/youtube-icon.jpg" alt="YouTube">
-                </a>
-                <a href="tel:1-855-466-9256" target="_blank">
-                    <img src="https://i.ibb.co/356yBq0D/phone-icon.jpg" alt="Phone">
-                </a>
-                <a href="mailto:ngonzalo@gonzalolaw.com" target="_blank">
-                    <img src="https://i.ibb.co/MvsWmCm/email-icon.jpg" alt="Email">
-                </a>
-            </div>
-
-            <div class="disclaimer">
-                <img src="https://i.ibb.co/0jdT5NFD/info-icon.jpg" alt="Info"
-                    style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;">
-                The contents of this email and any attachments are confidential. They are intended for the named
-                recipient(s) only.
-                If you have received this email by mistake, please notify the sender immediately and do not disclose the
-                contents to
-                anyone or make copies thereof.
-            </div>
+        </div>
+        <div class="disclaimer">
+            <!-- <img src="https://i.ibb.co/0jdT5NFD/info-icon.jpg" alt="Info"
+                style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"> -->
+            <strong>Disclaimer:</strong>
+            The contents of this email and any attachments are confidential. They are intended for the named
+            recipient(s) only.
+            If you have received this email by mistake, please notify the sender immediately and do not disclose
+            the
+            contents to
+            anyone or make copies thereof.
         </div>
     </div>
 </body>
