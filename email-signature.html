@@ -1,62 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         .signature-container {
-            font-family: Arial, sans-serif;
-            max-width: 400px;
+            font-family: 'Poppins', Arial, sans-serif;
+            max-width: 550px;
             width: 100%;
-            color: #2b2147;
-            line-height: 1.4;
+            color: #2B2147;
+            line-height: 1.6;
+            display: flex;
+            gap: 20px;
+            padding: 15px;
         }
+
+        .profile-image {
+            width: 86px;
+            height: 125px;
+            border-radius: 8px;
+            border: 1px solid rgba(220, 195, 161, 0.8);
+        }
+
+        .content-container {
+            flex: 1;
+        }
+
         .name {
-            font-weight: bold;
-            font-size: 16px;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 2px;
+            color: #2B2147;
         }
+
         .title {
-            font-size: 12px;
-            margin-bottom: 5px;
+            font-size: 14px;
+            color: #EE8C3A;
+            font-weight: 500;
+            margin-bottom: 4px;
         }
+
         .practice-areas {
-            font-size: 10px;
-            color: #2b2147;
-            margin-bottom: 10px;
+            font-size: 12px;
+            color: #2B2147;
+            margin-bottom: 8px;
+            font-weight: 400;
         }
+
         .locations {
-            font-size: 10px;
-            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
         }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: #2B2147;
+            text-decoration: none;
+        }
+
+        .location-item img {
+            width: 12px;
+            height: 12px;
+        }
+
+        .social-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            background: rgba(220, 195, 161, 0.1);
+            border-radius: 4px;
+        }
+
+        .badge img {
+            width: 14px;
+            height: 14px;
+        }
+
+        .badge span {
+            font-size: 11px;
+            color: #2B2147;
+        }
+
         .social-icons {
             display: flex;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 12px;
         }
+
         .social-icons a {
             text-decoration: none;
-            color: #2b2147;
+        }
+
+        .social-icons img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .disclaimer {
+            font-size: 10px;
+            color: #2B2147;
+            opacity: 0.8;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        .divider {
+            color: #2B2147;
+            opacity: 0.5;
+            margin: 0 4px;
         }
     </style>
 </head>
+
 <body>
     <div class="signature-container">
-        <div class="name">Nouvelle L. Gonzalo, Esq.</div>
-        <div class="title" style="color: #ee8c3a;">Founder and Managing Attorney</div>
-        <div class="practice-areas">International | Non-Profits | Contracts | M&A | Non-Profits</div>
-        <div class="locations">
-            <a href="https://g.co/kgs/vgDUcPe" style="color: #2b2147; text-decoration: none;">Miami</a> | 
-            <a href="https://g.co/kgs/S851p8W" style="color: #2b2147; text-decoration: none;">New York</a> | 
-            <a href="https://g.co/kgs/jTj2vhc" style="color: #2b2147; text-decoration: none;">Cleveland</a> | 
-            <a href="https://g.co/kgs/a2TwkR7" style="color: #2b2147; text-decoration: none;">Gainesville</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://gonzalolaw.com/" target="_blank">🌐</a>
-            <a href="tel:1-855-466-9256" target="_blank">📞</a>
-            <a href="mailto:ngonzalo@gonzalolaw.com" target="_blank">✉️</a>
-            <a href="https://www.linkedin.com/in/nouvelle-gonzalo/" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/gonzalolawpllc/" target="_blank">Instagram</a>
-            <a href="https://www.youtube.com/@GonzaloLawPLLC?sub_confirmation=1" target="_blank">YouTube</a>
+        <img src="assets/display-picture.svg" alt="Nouvelle L. Gonzalo" class="profile-image">
+        <div class="content-container">
+            <div class="name">Nouvelle L. Gonzalo, Esq.</div>
+            <div class="title">Founder and Managing Attorney</div>
+            <div class="practice-areas">International | Non-Profits | Contracts | M&A</div>
+
+            <div class="locations">
+                <a href="https://g.co/kgs/vgDUcPe" class="location-item">
+                    <img src="assets/pin-icon.svg" alt="Location">
+                    Miami
+                </a>
+                <span class="divider">|</span>
+                <a href="https://g.co/kgs/S851p8W" class="location-item">
+                    <img src="assets/pin-icon.svg" alt="Location">
+                    New York
+                </a>
+                <span class="divider">|</span>
+                <a href="https://g.co/kgs/jTj2vhc" class="location-item">
+                    <img src="assets/pin-icon.svg" alt="Location">
+                    Cleveland
+                </a>
+                <span class="divider">|</span>
+                <a href="https://g.co/kgs/a2TwkR7" class="location-item">
+                    <img src="assets/pin-icon.svg" alt="Location">
+                    Gainesville
+                </a>
+            </div>
+
+            <div class="social-badges">
+                <div class="badge">
+                    <img src="assets/award-icon.svg" alt="Super Lawyers">
+                    <span>Super Lawyers Selectee</span>
+                </div>
+                <div class="badge">
+                    <img src="assets/play-icon.svg" alt="Bloomberg">
+                    <span>As seen on Bloomberg</span>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://gonzalolaw.com/" target="_blank">
+                    <img src="assets/globe-icon.svg" alt="Website">
+                </a>
+                <a href="https://www.linkedin.com/in/nouvelle-gonzalo/" target="_blank">
+                    <img src="assets/linkedin-icon.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/gonzalolawpllc/" target="_blank">
+                    <img src="assets/insta-icon.svg" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@GonzaloLawPLLC?sub_confirmation=1" target="_blank">
+                    <img src="assets/youtube-icon.svg" alt="YouTube">
+                </a>
+                <a href="tel:1-855-466-9256" target="_blank">
+                    <img src="assets/phone-icon.svg" alt="Phone">
+                </a>
+                <a href="mailto:ngonzalo@gonzalolaw.com" target="_blank">
+                    <img src="assets/email-icon.svg" alt="Email">
+                </a>
+            </div>
+
+            <div class="disclaimer">
+                <img src="assets/info-icon.svg" alt="Info"
+                    style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;">
+                The contents of this email and any attachments are confidential. They are intended for the named
+                recipient(s) only.
+                If you have received this email by mistake, please notify the sender immediately and do not disclose the
+                contents to
+                anyone or make copies thereof.
+            </div>
         </div>
     </div>
 </body>
+
 </html>
+
+<!-- 
+display picture
+https://drive.google.com/file/d/1Y9zb85I6TFtkrzfVC-ibhmZ9IECqQrv8/view?usp=sharing
+
+Play Icon
+https://drive.google.com/file/d/1Ji_a2jnDma2AgA7wo4CC1UUWxbAP9_Jh/view?usp=drive_link
+
+Award Icon
+https://drive.google.com/file/d/1zFoBClx4KKJ4kIcggxre3RaAVqsAI2Bl/view?usp=drive_link
+
+PIn Icon
+https://drive.google.com/file/d/1DqX1G43hPCQJFRt9TSEIFSTbxh7RWxrZ/view?usp=drive_link
+
+LinkedIn Icon
+https://drive.google.com/file/d/1_gofyPPBcY0XLiVAvrP_bpDEmt0X-pvN/view?usp=sharing
+
+Youtube Icon
+https://drive.google.com/file/d/1ZO6mnbpev0j_XRIqHBDHJGhHD7a2M_Kl/view?usp=drive_link
+
+Info Icon
+https://drive.google.com/file/d/1SoUuhGmuWzHGbzTlGKG5tCZvigGmpxSx/view?usp=drive_link
+
+Phone Icon
+https://drive.google.com/file/d/1QMc912e2gtaNyXiXsC_OFZDU-O1I1dVQ/view?usp=drive_link
+
+Email Icon
+https://drive.google.com/file/d/14T7QXa1Ze1ovyxoU_gp1I1oqVqP3n6M1/view?usp=drive_link
+
+Insta Icon
+https://drive.google.com/file/d/13eE9_UibkgsxrMoPaixO3D5sBsgc6mrw/view?usp=drive_link
+
+Globe Icon
+https://drive.google.com/file/d/13OpYPXwu4sh7Kp9uogoF7n75e1wHxAyQ/view?usp=drive_link
+
+-->
