@@ -1,0 +1,15 @@
+{
+	"name": "ganzalo-email-signature",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"compile": "mjml input.html -o output.html",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"mjml": "^4.15.3"
+	}
+}
