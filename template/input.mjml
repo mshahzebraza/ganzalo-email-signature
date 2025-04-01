@@ -25,12 +25,6 @@
     </mj-attributes>
 
 
-    <!-- Service Tag: 12*2.2=26.4px ~ 26px -->
-    <mj-attributes>
-      <!-- <mj-class name="service-tag" padding: 2px 6px; font-size: 12px; color: #2B2147; /> -->
-      <mj-class name="location-link" color: #2B2147; text-decoration: none; font-size: 10px; />
-      <mj-class name="badge-text" font-size: 10px; color: #2B2147; />
-    </mj-attributes>
 
     <!-- Custom CSS -->
     <mj-style>
@@ -67,10 +61,46 @@
         letter-spacing: 0.04em;
       }
 
-      .badge-text {
+
+      .badge-cell {
+        background-color: #F5F5F5;
+        border: 1px solid #E5E5E5;
+        border-radius: 2px;
+        padding: 3px 4px;
+        white-space: nowrap;
+      }
+
+      /* Media Column */
+      /* ? Different background color and border color to indicate media links */
+      .media-column .badge-cell {
+        background-color: hsl(219, 60%, 95.50%);
+        border: 1px solid hsl(219, 60%, 80.00%);
+      }
+
+
+      .badge-cell a {
+        text-decoration: underline;
+      }
+
+      .badge-cell a span {
+        text-decoration: underline;
+        color: hsl(219, 60%, 55.50%);
+      }
+
+      .badge-cell img {
+        vertical-align: middle;
+      }
+
+      .badge-cell span {
         font-size: 10px;
         color: #2B2147;
+        vertical-align: middle;
+        line-height: 14px;
+        /* Match the icon height */
+        display: inline-block;
+        padding-left: 4px;
       }
+
 
       .social-icons {
         display: inline-block;
@@ -185,28 +215,35 @@
             <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px;">
               <tr>
                 <!-- Awards Column -->
-                <td style="padding-right: 16px; vertical-align: top;">
+                <td style="padding-right: 16px; vertical-align: top;" class="awards-column">
                   <table cellspacing="0" border="0">
                     {{#each badges.awards}}
                       <tr>
-                        <td style="padding-bottom: 4px; white-space: nowrap;">
-                          <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle;">
-                          <span class="badge-text" style="padding-left: 4px;">{{text}}</span>
+                        <!-- TODO: If last badge then no padding-bottom -->
+                        <td style="padding-bottom: 6px;">
+                          <div class="badge-cell">
+                            <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                            <span>{{text}}</span>
+                          </div>
                         </td>
                       </tr>
                     {{/each}}
                   </table>
                 </td>
+
                 <!-- Media Column -->
-                <td style="vertical-align: top;">
+                <td style="vertical-align: top;" class="media-column">
                   <table cellspacing="0" border="0">
                     {{#each badges.media}}
                       <tr>
-                        <td style="padding-bottom: 4px; white-space: nowrap;">
-                          <a href="{{url}}" style="text-decoration: none;">
-                            <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle;">
-                            <span class="badge-text" style="padding-left: 4px;">{{text}}</span>
-                          </a>
+                        <!-- TODO: If last badge then no padding-bottom -->
+                        <td style="padding-bottom: 6px;">
+                          <div class="badge-cell">
+                            <a href="{{url}}">
+                              <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                              <span>{{text}}</span>
+                            </a>
+                          </div>
                         </td>
                       </tr>
                     {{/each}}
