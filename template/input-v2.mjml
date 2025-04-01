@@ -191,6 +191,12 @@
             </table>
           </mj-raw>
 
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column>
+
           <!-- Services -->
           <mj-raw>
             <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
@@ -262,23 +268,25 @@
               </tr>
             </table>
           </mj-raw>
+
         </mj-column>
       </mj-section>
 
       <!-- Disclaimer -->
-      <mj-raw>
-        <div class="disclaimer-wrapper">
-      </mj-raw>
       <mj-section mj-class="disclaimer-section">
+        <mj-raw>
+          <!-- Review: Fix this hack -->
+          <div class="disclaimer-wrapper">
+        </mj-raw>
         <mj-column>
           <mj-text mj-class="disclaimer">
             <strong>Disclaimer:</strong> {{disclaimer.text}}
           </mj-text>
         </mj-column>
+        <mj-raw>
+          </div>
+        </mj-raw>
       </mj-section>
-      <mj-raw>
-        </div>
-      </mj-raw>
 
     </mj-wrapper>
 
