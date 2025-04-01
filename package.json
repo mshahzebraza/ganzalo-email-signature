@@ -1,15 +1,15 @@
 {
-	"name": "ganzalo-email-signature",
+	"name": "email-signature-generator",
 	"version": "1.0.0",
-	"main": "index.js",
+	"description": "Email signature generator using MJML and configuration",
+	"main": "generate.js",
 	"scripts": {
-		"compile": "mjml input.html -o output.html",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"generate": "node generate.js"
 	},
 	"author": "",
 	"license": "ISC",
-	"description": "",
 	"dependencies": {
-		"mjml": "^4.15.3"
+		"handlebars": "^4.7.8",
+		"mjml": "^4.14.1"
 	}
 }
