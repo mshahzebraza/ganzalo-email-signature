@@ -10,6 +10,26 @@
       <mj-wrapper padding="0" border="1px solid rgb(188, 188, 188)" />
       <mj-section padding="0" />
       <mj-column padding="0" />
+
+    </mj-attributes>
+
+    <!-- Information Attributes -->
+    <mj-attributes>
+      <!-- Title: 14*1.5=21px -->
+      <mj-class name="title" font-size="21px" font-weight="600" line-height="1" padding-bottom="2px" color="#2A2042" />
+      <!-- Subtitle: 8*1.5=12px -->
+      <mj-class name="subtitle" font-size="12px" line-height="1" padding-bottom="2px" color="#7059A6" />
+      <!-- Company: 7*1.5=10.5px ~ 11px -->
+      <mj-class name="company" font-size="11px" italic color="#EE8C3A" padding-bottom="2px" />
+
+    </mj-attributes>
+
+
+    <!-- Service Tag: 12*2.2=26.4px ~ 26px -->
+    <mj-attributes>
+      <mj-class name="service-tag" padding: 2px 6px; font-size: 12px; color: #2B2147; />
+      <mj-class name="location-link" color: #2B2147; text-decoration: none; font-size: 10px; />
+      <mj-class name="badge-text" font-size: 10px; color: #2B2147; />
     </mj-attributes>
 
     <!-- Custom CSS -->
@@ -78,15 +98,15 @@
 
         <!-- Main Content Column -->
         <mj-column width="75%" vertical-align="top">
-          <mj-text font-size="20px" font-weight="bold" line-height="1" padding-bottom="2px">
+          <mj-text mj-class="title">
             {{profile.name}}
           </mj-text>
 
-          <mj-text font-size="12px" line-height="1" padding-bottom="2px">
+          <mj-text mj-class="subtitle">
             {{profile.title}}
           </mj-text>
 
-          <mj-text font-size="11px" color="#EE8C3A" padding-bottom="2px">
+          <mj-text mj-class="company">
             {{profile.company}}
           </mj-text>
 
