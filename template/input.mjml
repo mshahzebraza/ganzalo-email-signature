@@ -211,7 +211,7 @@
                 {{#each locations}}
                   <td style="white-space: nowrap; padding-right: 8px;">
                     <a href="{{mapUrl}}" class="location-link">
-                      <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/pin-icon.svg?raw=true" alt="Location" width="10" height="13" style="vertical-align: middle; padding-right: 2px;">
+                      <img src="{{../locationIcon}}" alt="Location" width="10" height="13" style="vertical-align: middle; padding-right: 2px;">
                       <span>{{name}}</span>
                     </a>
                   </td>
