@@ -3,6 +3,9 @@
     <!-- Import Google Fonts -->
     <mj-font name="Poppins" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
 
+    <!-- Set custom breakpoint -->
+    <mj-breakpoint width="500px" />
+
     <!-- Global Styles -->
     <mj-attributes>
       <mj-all font-family="Poppins, sans-serif" padding="0" />
@@ -16,11 +19,11 @@
     <!-- Information Attributes -->
     <mj-attributes>
       <!-- Title: 14*1.5=21px -->
-      <mj-class name="title" font-size="18px" font-weight="600" line-height="1" padding-bottom="2px" color="#2A2042" />
+      <mj-class name="title" font-size="20px" font-weight="600" line-height="1" padding-bottom="2px" color="#2A2042" />
       <!-- Subtitle: 8*1.5=12px -->
-      <mj-class name="subtitle" font-size="12px" line-height="1" padding-bottom="2px" color="#7059A6" />
+      <mj-class name="subtitle" font-size="14px" line-height="1" padding-bottom="2px" color="#7059A6" />
       <!-- Company: 7*1.5=10.5px ~ 11px -->
-      <mj-class name="company" font-size="11px" italic color="#EE8C3A" padding-bottom="2px" />
+      <mj-class name="company" font-size="12px" italic color="#EE8C3A" padding-bottom="2px" />
 
       <!-- Disclaimer Section -->
       <!-- Warning background color: -->
@@ -132,6 +135,16 @@
         border-radius: 4px;
         overflow: hidden;
       }
+
+      @media (max-width:500px) {
+        .profile-image {
+          display: none !important;
+        }
+
+        .main-content-column {
+          width: 100% !important;
+        }
+      }
     </mj-style>
 
     <!-- Variables -->
@@ -159,12 +172,12 @@
       <!-- Main Content -->
       <mj-section css-class="main-content" padding="0" full-width="full-width" text-align="left">
         <!-- Profile Picture Column -->
-        <mj-column width="125px" vertical-align="top" padding="0">
+        <mj-column width="125px" vertical-align="top" padding="0" css-class="profile-image">
           <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" width="125px" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
         </mj-column>
 
         <!-- Main Content Column -->
-        <mj-column width="75%" vertical-align="top">
+        <mj-column width="75%" vertical-align="top" css-class="main-content-column">
           <mj-text mj-class="title">
             {{profile.name}}
           </mj-text>
@@ -178,28 +191,9 @@
           </mj-text>
 
 
-          <!-- 
-            {{#each services}}
-          <mj-column padding="0 8px 0 0">
-            <mj-text mj-class="service-tag" padding="0" font-size="12px">{{this}}</mj-text>
-          </mj-column>
-          {{#unless @last}}
-            <mj-column width="20px" padding="0">
-              <mj-text color="#2B2147" padding="0" align="center">|</mj-text>
-            </mj-column>
-          {{/unless}}
-        {{/each}}
-          
-          
-           -->
-
-          <!-- Each column contains a service tag -->
-
-
-
           <!-- Services -->
           <mj-raw>
-            <table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0; ">
+            <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 {{#each services}}
                   <td class="service-tag">

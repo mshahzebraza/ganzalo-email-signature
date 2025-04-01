@@ -40,13 +40,13 @@
     
     
     <style type="text/css">
-      @media only screen and (min-width:480px) {
+      @media only screen and (min-width:500px) {
         .mj-column-per-100 { width:100% !important; max-width: 100%; }
 .mj-column-px-125 { width:125px !important; max-width: 125px; }
 .mj-column-per-75 { width:75% !important; max-width: 75%; }
       }
     </style>
-    <style media="screen and (min-width:480px)">
+    <style media="screen and (min-width:500px)">
       .moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }
 .moz-text-html .mj-column-px-125 { width:125px !important; max-width: 125px; }
 .moz-text-html .mj-column-per-75 { width:75% !important; max-width: 75%; }
@@ -57,7 +57,7 @@
     
     <style type="text/css">
 
-    @media only screen and (max-width:479px) {
+    @media only screen and (max-width:499px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -162,8 +162,19 @@
         border-radius: 4px;
         overflow: hidden;
       }
+
+      @media (max-width:500px) {
+        .profile-image {
+          display: none !important;
+        }
+
+        .main-content-column {
+          width: 100% !important;
+        }
+      }
     </style>
     <!-- Import Google Fonts -->
+<!-- Set custom breakpoint -->
 <!-- Global Styles -->
 <!-- Information Attributes -->
 <!-- Custom CSS -->
@@ -294,10 +305,10 @@
               >
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><![endif]-->
       <!-- Profile Picture Column -->
-          <!--[if mso | IE]><td class="" style="vertical-align:top;width:125px;" ><![endif]-->
+          <!--[if mso | IE]><td class="profile-image-outlook" style="vertical-align:top;width:125px;" ><![endif]-->
             
       <div
-         class="mj-column-px-125 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+         class="mj-column-px-125 mj-outlook-group-fix profile-image" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
       >
         
       <table
@@ -348,10 +359,10 @@
     
           <!--[if mso | IE]></td><![endif]-->
     <!-- Main Content Column -->
-          <!--[if mso | IE]><td class="" style="vertical-align:top;width:412.5px;" ><![endif]-->
+          <!--[if mso | IE]><td class="main-content-column-outlook" style="vertical-align:top;width:412.5px;" ><![endif]-->
             
       <div
-         class="mj-column-per-75 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+         class="mj-column-per-75 mj-outlook-group-fix main-content-column" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
       >
         
       <table
@@ -372,7 +383,7 @@
                 >
                   
       <div
-         style="font-family:Poppins, sans-serif;font-size:18px;font-weight:600;line-height:1;text-align:left;color:#2A2042;"
+         style="font-family:Poppins, sans-serif;font-size:20px;font-weight:600;line-height:1;text-align:left;color:#2A2042;"
       >Nouvelle L. Gonzalo, Esq.</div>
     
                 </td>
@@ -384,7 +395,7 @@
                 >
                   
       <div
-         style="font-family:Poppins, sans-serif;font-size:12px;line-height:1;text-align:left;color:#7059A6;"
+         style="font-family:Poppins, sans-serif;font-size:14px;line-height:1;text-align:left;color:#7059A6;"
       >Founder and Managing Attorney</div>
     
                 </td>
@@ -396,7 +407,7 @@
                 >
                   
       <div
-         style="font-family:Poppins, sans-serif;font-size:11px;line-height:1;text-align:left;color:#EE8C3A;"
+         style="font-family:Poppins, sans-serif;font-size:12px;line-height:1;text-align:left;color:#EE8C3A;"
       >Gonzalo Law PLLC</div>
     
                 </td>
@@ -427,7 +438,7 @@
             </mj-column>
           <mj-column padding="0 8px 0 0">
             <mj-text mj-class="service-tag" padding="0" font-size="12px">IP</mj-text>
-          </mj-column> --><!-- Each column contains a service tag --><!-- Services --><table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0; ">
+          </mj-column> --><!-- Each column contains a service tag --><!-- Services --><table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
               <tr>
                   <td class="service-tag">
                     <span>International</span>
