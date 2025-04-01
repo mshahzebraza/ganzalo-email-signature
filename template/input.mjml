@@ -70,14 +70,14 @@
       </mj-section>
 
       <!-- Main Content -->
-      <mj-section>
+      <mj-section padding="0" full-width="full-width" text-align="left">
         <!-- Profile Picture Column -->
-        <mj-column width="125px" vertical-align="top">
+        <mj-column width="125px" vertical-align="top" padding="0">
           <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" width="125px" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
         </mj-column>
 
         <!-- Main Content Column -->
-        <mj-column width="395px" vertical-align="top">
+        <mj-column width="75%" vertical-align="top">
           <mj-text font-size="20px" font-weight="bold" line-height="1" padding-bottom="2px">
             {{profile.name}}
           </mj-text>
