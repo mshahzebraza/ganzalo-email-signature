@@ -19,11 +19,11 @@
     <!-- Information Attributes -->
     <mj-attributes>
       <!-- Title: 14*1.5=21px -->
-      <mj-class name="title" font-size="20px" font-weight="600" line-height="1" padding-bottom="2px" color="#2A2042" />
+      <mj-class name="title" font-size="22px" font-weight="600" letter-spacing="0.02em" line-height="1.2" padding-bottom="2px" color="#423267" />
       <!-- Subtitle: 8*1.5=12px -->
-      <mj-class name="subtitle" font-size="14px" line-height="1" padding-bottom="2px" color="#7059A6" />
+      <mj-class name="subtitle" font-size="16px" font-weight="300" line-height="1.2" padding-bottom="2px" color="#8C7AB8" />
       <!-- Company: 7*1.5=10.5px ~ 11px -->
-      <mj-class name="company" font-size="12px" italic color="#EE8C3A" padding-bottom="2px" />
+      <mj-class name="company" font-size="14px" line-height="1.2" italic color="#EE8C3A" padding-bottom="4px" />
 
       <!-- Disclaimer Section -->
       <!-- Warning background color: -->
@@ -151,19 +151,23 @@
     <mj-preview>Nouvelle L. Gonzalo - Email Signature</mj-preview>
   </mj-head>
 
-  <mj-body width="550px" background-color="#FFFFFF">
+  <mj-body width="420px" background-color="#FFFFFF">
     <mj-wrapper>
 
       <!-- Main Content -->
       <mj-section css-class="main-content" padding="0" full-width="full-width" text-align="left">
 
         <!-- Profile Picture Column -->
-        <mj-column width="125px" vertical-align="top" padding="0" css-class="profile-image">
-          <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" width="125px" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
+        <mj-column width="100px" vertical-align="top" padding="0" css-class="profile-image">
+          <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
         </mj-column>
 
         <!-- Main Content Column -->
         <mj-column width="75%" vertical-align="top" css-class="main-content-column">
+
+
+
+          <!-- Basic Info -->
           <mj-text mj-class="title">
             {{profile.name}}
           </mj-text>
@@ -176,6 +180,9 @@
             {{profile.company}}
           </mj-text>
 
+
+
+
           <!-- Social Icons Row -->
           <mj-raw>
             <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
@@ -183,7 +190,7 @@
                 {{#each socialLinks}}
                   <td>
                     <a href="{{url}}" target="_blank" class="social-icons">
-                      <img src="{{icon}}" alt="{{alt}}" width="22" height="22">
+                      <img src="{{icon}}" alt="{{alt}}" width="24" height="24">
                     </a>
                   </td>
                 {{/each}}
@@ -191,11 +198,32 @@
             </table>
           </mj-raw>
 
+
+
         </mj-column>
+
       </mj-section>
 
       <mj-section>
         <mj-column>
+
+
+          <!-- Locations -->
+          <mj-raw>
+            <table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0 12px;">
+              <tr>
+                {{#each locations}}
+                  <td style="white-space: nowrap; padding-right: 8px;">
+                    <a href="{{mapUrl}}" class="location-link">
+                      <img src="{{../locationIcon}}" alt="Location" width="10" height="13" style="vertical-align: middle; padding-right: 2px;">
+                      <span>{{name}}</span>
+                    </a>
+                  </td>
+                {{/each}}
+              </tr>
+            </table>
+          </mj-raw>
+
 
           <!-- Services -->
           <mj-raw>
@@ -210,25 +238,10 @@
             </table>
           </mj-raw>
 
-          <!-- Locations -->
-          <mj-raw>
-            <table cellpadding="0" cellspacing="0" border="0" style="margin: 8px 0;">
-              <tr>
-                {{#each locations}}
-                  <td style="white-space: nowrap; padding-right: 8px;">
-                    <a href="{{mapUrl}}" class="location-link">
-                      <img src="{{../locationIcon}}" alt="Location" width="10" height="13" style="vertical-align: middle; padding-right: 2px;">
-                      <span>{{name}}</span>
-                    </a>
-                  </td>
-                {{/each}}
-              </tr>
-            </table>
-          </mj-raw>
 
           <!-- Badges -->
           <mj-raw>
-            <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px;">
+            <table cellpadding="0" cellspacing="0" border="0" style="margin: 8px 0;">
               <tr>
                 <!-- Awards Column -->
                 <td style="padding-right: 16px; vertical-align: top;" class="awards-column">
