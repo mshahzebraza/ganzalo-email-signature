@@ -54,25 +54,25 @@
 		"awards": [
 			{
 				"text": "Super Lawyers Awardee",
-				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.svg?raw=true",
+				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.jpg?raw=true",
 				"alt": "Super Lawyers"
 			},
 			{
 				"text": "100 Most Influential Women",
-				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.svg?raw=true",
+				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.jpg?raw=true",
 				"alt": "Award"
 			}
 		],
 		"media": [
 			{
 				"text": "As seen on Bloomberg Business",
-				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.svg?raw=true",
+				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.jpg?raw=true",
 				"url": "https://youtu.be/QkpH94lSvXs?si=2wxHwgm8LorSLLqm",
 				"alt": "Bloomberg"
 			},
 			{
 				"text": "About our Pro-Bono Law Program",
-				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.svg?raw=true",
+				"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.jpg?raw=true",
 				"url": "https://www.instagram.com/reel/DFdlS0Vpza-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
 				"alt": "Pro-Bono Program"
 			}
@@ -82,43 +82,43 @@
 		{
 			"type": "info",
 			"url": "https://drive.google.com/file/d/1GM5KUXqPt8h7IftLfr_vE5OwG7WBC0W7/view",
-			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/info-icon-container.svg?raw=true",
+			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/info-icon-container.jpg?raw=true",
 			"alt": "Info"
 		},
 		{
 			"type": "website",
 			"url": "https://gonzalolaw.com/",
-			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/globe-icon-container.svg?raw=true",
+			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/globe-icon-container.jpg?raw=true",
 			"alt": "Website"
 		},
 		{
 			"type": "linkedin",
 			"url": "https://www.linkedin.com/in/nouvelle-gonzalo/",
-			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/linkedin-icon-container.svg?raw=true",
+			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/linkedin-icon-container.jpg?raw=true",
 			"alt": "LinkedIn"
 		},
 		{
 			"type": "instagram",
 			"url": "https://www.instagram.com/gonzalolawpllc/",
-			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/insta-icon-container.svg?raw=true",
+			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/insta-icon-container.jpg?raw=true",
 			"alt": "Instagram"
 		},
 		{
 			"type": "youtube",
 			"url": "https://www.youtube.com/@GonzaloLawPLLC?sub_confirmation=1",
-			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/youtube-icon-container.svg?raw=true",
+			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/youtube-icon-container.jpg?raw=true",
 			"alt": "YouTube"
 		},
 		{
 			"type": "phone",
 			"url": "tel:1-855-466-9256",
-			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/phone-icon-container.svg?raw=true",
+			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/phone-icon-container.jpg?raw=true",
 			"alt": "Phone"
 		},
 		{
 			"type": "email",
 			"url": "mailto:ngonzalo@gonzalolaw.com",
-			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/email-icon-container.svg?raw=true",
+			"icon": "https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/email-icon-container.jpg?raw=true",
 			"alt": "Email"
 		}
 	],
