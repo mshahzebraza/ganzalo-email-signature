@@ -27,16 +27,36 @@
 
     <!-- Service Tag: 12*2.2=26.4px ~ 26px -->
     <mj-attributes>
-      <mj-class name="service-tag" padding: 2px 6px; font-size: 12px; color: #2B2147; />
+      <!-- <mj-class name="service-tag" padding: 2px 6px; font-size: 12px; color: #2B2147; /> -->
       <mj-class name="location-link" color: #2B2147; text-decoration: none; font-size: 10px; />
       <mj-class name="badge-text" font-size: 10px; color: #2B2147; />
     </mj-attributes>
 
     <!-- Custom CSS -->
     <mj-style>
-      .service-tag {
+      * {
+        font-family: 'Poppins', sans-serif;
+        /*
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      */
+      }
+
+
+
+      /* Service Tag: 5*1.5=7.5px ~ 8px */
+      td.service-tag {
+        white-space: nowrap;
+        padding-right: 8px;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+      }
+
+      td.service-tag span {
+        background-color: #F5F5F5;
         padding: 2px 6px;
-        font-size: 12px;
         color: #2B2147;
       }
 
@@ -110,17 +130,34 @@
             {{profile.company}}
           </mj-text>
 
+
+          <!-- 
+            {{#each services}}
+          <mj-column padding="0 8px 0 0">
+            <mj-text mj-class="service-tag" padding="0" font-size="12px">{{this}}</mj-text>
+          </mj-column>
+          {{#unless @last}}
+            <mj-column width="20px" padding="0">
+              <mj-text color="#2B2147" padding="0" align="center">|</mj-text>
+            </mj-column>
+          {{/unless}}
+        {{/each}}
+          
+          
+           -->
+
+          <!-- Each column contains a service tag -->
+
+
+
           <!-- Services -->
           <mj-raw>
-            <table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0;">
+            <table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0; ">
               <tr>
                 {{#each services}}
-                  <td style="white-space: nowrap; padding-right: 8px;">
-                    <span class="service-tag">{{this}}</span>
+                  <td class="service-tag">
+                    <span>{{this}}</span>
                   </td>
-                  {{#unless @last}}
-                    <td style="padding: 0 4px; color: #2B2147;">|</td>
-                  {{/unless}}
                 {{/each}}
               </tr>
             </table>

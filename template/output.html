@@ -65,9 +65,29 @@
     </style>
      
     <style type="text/css">
-.service-tag {
+* {
+        font-family: 'Poppins', sans-serif;
+        /*
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      */
+      }
+
+
+
+      /* Service Tag: 5*1.5=7.5px ~ 8px */
+      td.service-tag {
+        white-space: nowrap;
+        padding-right: 8px;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+      }
+
+      td.service-tag span {
+        background-color: #F5F5F5;
         padding: 2px 6px;
-        font-size: 12px;
         color: #2B2147;
       }
 
@@ -99,6 +119,8 @@
     </style>
     <!-- Import Google Fonts -->
 <!-- Global Styles -->
+<!-- Information Attributes -->
+<!-- Service Tag: 12*2.2=26.4px ~ 26px -->
 <!-- Custom CSS -->
 <!-- Variables -->
   </head>
@@ -334,26 +356,48 @@
     
                 </td>
               </tr>
-            <!-- Services --><table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0;">
+            <!-- <mj-column padding="0 8px 0 0">
+            <mj-text mj-class="service-tag" padding="0" font-size="12px">International</mj-text>
+          </mj-column>
+            <mj-column width="20px" padding="0">
+              <mj-text color="#2B2147" padding="0" align="center">|</mj-text>
+            </mj-column>
+          <mj-column padding="0 8px 0 0">
+            <mj-text mj-class="service-tag" padding="0" font-size="12px">Non-Profits</mj-text>
+          </mj-column>
+            <mj-column width="20px" padding="0">
+              <mj-text color="#2B2147" padding="0" align="center">|</mj-text>
+            </mj-column>
+          <mj-column padding="0 8px 0 0">
+            <mj-text mj-class="service-tag" padding="0" font-size="12px">M&amp;A</mj-text>
+          </mj-column>
+            <mj-column width="20px" padding="0">
+              <mj-text color="#2B2147" padding="0" align="center">|</mj-text>
+            </mj-column>
+          <mj-column padding="0 8px 0 0">
+            <mj-text mj-class="service-tag" padding="0" font-size="12px">Contracts</mj-text>
+          </mj-column>
+            <mj-column width="20px" padding="0">
+              <mj-text color="#2B2147" padding="0" align="center">|</mj-text>
+            </mj-column>
+          <mj-column padding="0 8px 0 0">
+            <mj-text mj-class="service-tag" padding="0" font-size="12px">IP</mj-text>
+          </mj-column> --><!-- Each column contains a service tag --><!-- Services --><table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0; ">
               <tr>
-                  <td style="white-space: nowrap; padding-right: 8px;">
-                    <span class="service-tag">International</span>
+                  <td class="service-tag">
+                    <span>International</span>
                   </td>
-                    <td style="padding: 0 4px; color: #2B2147;">|</td>
-                  <td style="white-space: nowrap; padding-right: 8px;">
-                    <span class="service-tag">Non-Profits</span>
+                  <td class="service-tag">
+                    <span>Non-Profits</span>
                   </td>
-                    <td style="padding: 0 4px; color: #2B2147;">|</td>
-                  <td style="white-space: nowrap; padding-right: 8px;">
-                    <span class="service-tag">M&amp;A</span>
+                  <td class="service-tag">
+                    <span>M&amp;A</span>
                   </td>
-                    <td style="padding: 0 4px; color: #2B2147;">|</td>
-                  <td style="white-space: nowrap; padding-right: 8px;">
-                    <span class="service-tag">Contracts</span>
+                  <td class="service-tag">
+                    <span>Contracts</span>
                   </td>
-                    <td style="padding: 0 4px; color: #2B2147;">|</td>
-                  <td style="white-space: nowrap; padding-right: 8px;">
-                    <span class="service-tag">IP</span>
+                  <td class="service-tag">
+                    <span>IP</span>
                   </td>
               </tr>
             </table><!-- Locations --><table cellpadding="0" cellspacing="0" border="0" style="margin: 4px 0;">
