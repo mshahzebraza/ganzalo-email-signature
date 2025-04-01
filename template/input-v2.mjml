@@ -154,23 +154,9 @@
   <mj-body width="550px" background-color="#FFFFFF">
     <mj-wrapper>
 
-      <!-- Social Icons Row -->
-      <mj-section>
-        <mj-column>
-          <mj-raw>
-            <div style="margin-bottom: 8px;">
-              {{#each socialLinks}}
-                <a href="{{url}}" target="_blank" class="social-icons">
-                  <img src="{{icon}}" alt="{{alt}}" width="22" height="22">
-                </a>
-              {{/each}}
-            </div>
-          </mj-raw>
-        </mj-column>
-      </mj-section>
-
       <!-- Main Content -->
       <mj-section css-class="main-content" padding="0" full-width="full-width" text-align="left">
+
         <!-- Profile Picture Column -->
         <mj-column width="125px" vertical-align="top" padding="0" css-class="profile-image">
           <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" width="125px" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
@@ -190,6 +176,20 @@
             {{profile.company}}
           </mj-text>
 
+          <!-- Social Icons Row -->
+          <mj-raw>
+            <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                {{#each socialLinks}}
+                  <td>
+                    <a href="{{url}}" target="_blank" class="social-icons">
+                      <img src="{{icon}}" alt="{{alt}}" width="22" height="22">
+                    </a>
+                  </td>
+                {{/each}}
+              </tr>
+            </table>
+          </mj-raw>
 
           <!-- Services -->
           <mj-raw>
