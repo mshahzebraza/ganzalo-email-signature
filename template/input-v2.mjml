@@ -78,6 +78,7 @@
         padding: 2px 4px 2px 7px;
         white-space: nowrap;
         margin-bottom: 6px;
+        margin-right: 8px
       }
 
       /* Media Column */
@@ -133,27 +134,15 @@
         overflow: hidden;
       }
 
-      .awards-column .badge-cell {
-        margin-right: 8px
-      }
-
-      /*
-      .awards-column {
-        padding-right: 8px;
-      }
-      */
 
       /* Responsive styles for badges section */
       @media screen and (max-width: 400px),
       screen and (max-width: 800px) and (-webkit-min-device-pixel-ratio: 2),
       screen and (max-width: 800px) and (min-resolution: 192dpi) {
-        .awards-column .badge-cell {
+        .badge-cell {
           margin-right: 0;
         }
 
-        .awards-column {
-          padding-right: 0;
-        }
 
         .awards-column,
         .media-column {
