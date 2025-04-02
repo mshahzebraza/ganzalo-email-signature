@@ -220,7 +220,7 @@
     <mj-section>
       <mj-column>
         <mj-raw>
-          <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
+          <table cellpadding="0" cellspacing="0" border="0" style="margin: 12px 0 4px;">
             <tr>
               {{#each services}}
                 <td class="service-tag">
@@ -237,7 +237,7 @@
     <mj-section>
       <mj-column>
         <mj-raw>
-          <table cellpadding="0" cellspacing="0" border="0" style="margin: 8px 0 4px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 6px;">
             <tr>
               {{#each locations}}
                 <td style="white-space: nowrap; padding-right: 8px;">
@@ -255,7 +255,7 @@
 
 
     <!-- Business Information -->
-    <mj-section padding-top="12px">
+    <mj-section padding-top="8px">
       <!-- Awards Column -->
       <mj-column css-class="awards-column">
         <mj-table>
