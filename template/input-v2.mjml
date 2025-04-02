@@ -17,7 +17,7 @@
       <!-- Title: 14*1.5=21px -->
       <mj-class name="title" font-size="20px" font-weight="600" letter-spacing="0.02em" line-height="1.2" padding-bottom="2px" color="#423267" />
       <!-- Subtitle: 8*1.5=12px -->
-      <mj-class name="subtitle" font-size="15px" font-weight="300" line-height="1.2" padding-bottom="2px" color="#8C7AB8" />
+      <mj-class name="subtitle" font-size="14px" font-weight="300" line-height="1.2" padding-bottom="2px" color="#8C7AB8" />
       <!-- Company: 7*1.5=10.5px ~ 11px -->
       <mj-class name="company" font-size="13px" line-height="1.2" italic color="#EE8C3A" padding-bottom="4px" />
 
@@ -73,8 +73,9 @@
         background-color: #F5F5F5;
         border: 1px solid #E5E5E5;
         border-radius: 2px;
-        padding: 3px 4px;
+        padding: 2px 4px 2px 7px;
         white-space: nowrap;
+        margin-bottom: 6px;
       }
 
       /* Media Column */
@@ -128,6 +129,33 @@
         border: 1px solid hsl(35, 94%, 80%);
         border-radius: 4px;
         overflow: hidden;
+      }
+
+      .awards-column .badge-cell {
+        margin-right: 8px
+      }
+
+      /*
+      .awards-column {
+        padding-right: 8px;
+      }
+      */
+
+      /* Responsive styles for badges section */
+      @media screen and (max-width: 400px) {
+        .awards-column .badge-cell {
+          margin-right: 0;
+        }
+
+        .awards-column {
+          padding-right: 0;
+        }
+
+        .awards-column,
+        .media-column {
+          width: 100% !important;
+          display: block !important;
+        }
       }
     </mj-style>
 
@@ -219,49 +247,39 @@
     </mj-section>
 
     <!-- Business Information -->
-    <mj-section>
-      <mj-column>
+    <mj-section padding-top="12px">
+      <!-- Awards Column -->
+      <mj-column css-class="awards-column">
+        <mj-table>
+          <tr>
+            <td>
+              {{#each badges.awards}}
+                <div class="badge-cell">
+                  <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                  <span>{{text}}</span>
+                </div>
+              {{/each}}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
 
-        <!-- Badges -->
-        <mj-raw>
-          <table cellpadding="0" cellspacing="0" border="0" style="margin: 8px 0;">
-            <tr>
-              <!-- Awards Column -->
-              <td style="padding-right: 16px; vertical-align: top;" class="awards-column">
-                <table cellspacing="0" border="0">
-                  {{#each badges.awards}}
-                    <tr>
-                      <td style="padding-bottom: 6px;">
-                        <div class="badge-cell">
-                          <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
-                          <span>{{text}}</span>
-                        </div>
-                      </td>
-                    </tr>
-                  {{/each}}
-                </table>
-              </td>
-
-              <!-- Media Column -->
-              <td style="vertical-align: top;" class="media-column">
-                <table cellspacing="0" border="0">
-                  {{#each badges.media}}
-                    <tr>
-                      <td style="padding-bottom: 6px;">
-                        <div class="badge-cell">
-                          <a href="{{url}}">
-                            <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
-                            <span>{{text}}</span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                  {{/each}}
-                </table>
-              </td>
-            </tr>
-          </table>
-        </mj-raw>
+      <!-- Media Column -->
+      <mj-column css-class="media-column">
+        <mj-table>
+          <tr>
+            <td>
+              {{#each badges.media}}
+                <div class="badge-cell">
+                  <a href="{{url}}">
+                    <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                    <span>{{text}}</span>
+                  </a>
+                </div>
+              {{/each}}
+            </td>
+          </tr>
+        </mj-table>
       </mj-column>
     </mj-section>
 

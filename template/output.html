@@ -44,12 +44,14 @@
         .mj-column-per-100 { width:100% !important; max-width: 100%; }
 .mj-column-px-100 { width:100px !important; max-width: 100px; }
 .mj-column-per-75 { width:75% !important; max-width: 75%; }
+.mj-column-per-50 { width:50% !important; max-width: 50%; }
       }
     </style>
     <style media="screen and (min-width:480px)">
       .moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }
 .moz-text-html .mj-column-px-100 { width:100px !important; max-width: 100px; }
 .moz-text-html .mj-column-per-75 { width:75% !important; max-width: 75%; }
+.moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }
     </style>
     
     
@@ -108,8 +110,9 @@
         background-color: #F5F5F5;
         border: 1px solid #E5E5E5;
         border-radius: 2px;
-        padding: 3px 4px;
+        padding: 2px 4px 2px 7px;
         white-space: nowrap;
+        margin-bottom: 6px;
       }
 
       /* Media Column */
@@ -163,6 +166,33 @@
         border: 1px solid hsl(35, 94%, 80%);
         border-radius: 4px;
         overflow: hidden;
+      }
+
+      .awards-column .badge-cell {
+        margin-right: 8px
+      }
+
+      /*
+      .awards-column {
+        padding-right: 8px;
+      }
+      */
+
+      /* Responsive styles for badges section */
+      @media screen and (max-width: 400px) {
+        .awards-column .badge-cell {
+          margin-right: 0;
+        }
+
+        .awards-column {
+          padding-right: 0;
+        }
+
+        .awards-column,
+        .media-column {
+          width: 100% !important;
+          display: block !important;
+        }
       }
     </style>
     <!-- Import Google Fonts -->
@@ -291,7 +321,7 @@
                 >
                   
       <div
-         style="font-family:Poppins, sans-serif;font-size:15px;font-weight:300;line-height:1.2;text-align:left;color:#8C7AB8;"
+         style="font-family:Poppins, sans-serif;font-size:14px;font-weight:300;line-height:1.2;text-align:left;color:#8C7AB8;"
       >Founder and Managing Attorney</div>
     
                 </td>
@@ -537,12 +567,14 @@
           <tbody>
             <tr>
               <td
-                 style="direction:ltr;font-size:0px;padding:0;text-align:left;"
+                 style="direction:ltr;font-size:0px;padding:0;padding-top:12px;text-align:left;"
               >
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:400px;" ><![endif]-->
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><![endif]-->
+      <!-- Awards Column -->
+          <!--[if mso | IE]><td class="awards-column-outlook" style="vertical-align:top;width:200px;" ><![endif]-->
             
       <div
-         class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+         class="mj-column-per-50 mj-outlook-group-fix awards-column" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
       >
         
       <table
@@ -556,57 +588,91 @@
          border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"
       >
         <tbody>
-          <!-- Badges --><table cellpadding="0" cellspacing="0" border="0" style="margin: 8px 0;">
-            <tr>
-              <!-- Awards Column -->
-              <td style="padding-right: 16px; vertical-align: top;" class="awards-column">
-                <table cellspacing="0" border="0">
-                    <tr>
-                      <td style="padding-bottom: 6px;">
-                        <div class="badge-cell">
-                          <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.png?raw&#x3D;true" alt="Super Lawyers" width="14" height="14" style="vertical-align: middle; display: inline-block;">
-                          <span>Super Lawyers Awardee</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding-bottom: 6px;">
-                        <div class="badge-cell">
-                          <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.png?raw&#x3D;true" alt="Award" width="14" height="14" style="vertical-align: middle; display: inline-block;">
-                          <span>100 Most Influential Women</span>
-                        </div>
-                      </td>
-                    </tr>
-                </table>
-              </td>
-
-              <!-- Media Column -->
-              <td style="vertical-align: top;" class="media-column">
-                <table cellspacing="0" border="0">
-                    <tr>
-                      <td style="padding-bottom: 6px;">
-                        <div class="badge-cell">
-                          <a href="https://youtu.be/QkpH94lSvXs?si&#x3D;2wxHwgm8LorSLLqm">
-                            <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.png?raw&#x3D;true" alt="Bloomberg" width="14" height="14" style="vertical-align: middle; display: inline-block;">
-                            <span>As seen on Bloomberg Business</span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding-bottom: 6px;">
-                        <div class="badge-cell">
-                          <a href="https://www.instagram.com/reel/DFdlS0Vpza-/?utm_source&#x3D;ig_web_copy_link&amp;igsh&#x3D;MzRlODBiNWFlZA&#x3D;&#x3D;">
-                            <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.png?raw&#x3D;true" alt="Pro-Bono Program" width="14" height="14" style="vertical-align: middle; display: inline-block;">
-                            <span>About our Pro-Bono Law Program</span>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
+          
+              <tr>
+                <td
+                   align="left" style="font-size:0px;padding:0;word-break:break-word;"
+                >
+                  
+      <table
+         cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Poppins, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;"
+      >
+        <tr>
+            <td>
+                <div class="badge-cell">
+                  <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.png?raw&#x3D;true" alt="Super Lawyers" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                  <span>Super Lawyers Awardee</span>
+                </div>
+                <div class="badge-cell">
+                  <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/award-icon.png?raw&#x3D;true" alt="Award" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                  <span>100 Most Influential Women</span>
+                </div>
+            </td>
+          </tr>
+      </table>
+    
+                </td>
+              </tr>
+            
+        </tbody>
+      </table>
+    
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+      </div>
+    
+          <!--[if mso | IE]></td><![endif]-->
+    <!-- Media Column -->
+          <!--[if mso | IE]><td class="media-column-outlook" style="vertical-align:top;width:200px;" ><![endif]-->
+            
+      <div
+         class="mj-column-per-50 mj-outlook-group-fix media-column" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"
+      >
+        
+      <table
+         border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
+      >
+        <tbody>
+          <tr>
+            <td  style="vertical-align:top;padding:0;">
+              
+      <table
+         border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"
+      >
+        <tbody>
+          
+              <tr>
+                <td
+                   align="left" style="font-size:0px;padding:0;word-break:break-word;"
+                >
+                  
+      <table
+         cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Poppins, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;"
+      >
+        <tr>
+            <td>
+                <div class="badge-cell">
+                  <a href="https://youtu.be/QkpH94lSvXs?si&#x3D;2wxHwgm8LorSLLqm">
+                    <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.png?raw&#x3D;true" alt="Bloomberg" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                    <span>As seen on Bloomberg Business</span>
+                  </a>
+                </div>
+                <div class="badge-cell">
+                  <a href="https://www.instagram.com/reel/DFdlS0Vpza-/?utm_source&#x3D;ig_web_copy_link&amp;igsh&#x3D;MzRlODBiNWFlZA&#x3D;&#x3D;">
+                    <img src="https://github.com/mshahzebraza/ganzalo-email-signature/blob/main/assets/v2/play-icon.png?raw&#x3D;true" alt="Pro-Bono Program" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                    <span>About our Pro-Bono Law Program</span>
+                  </a>
+                </div>
+            </td>
+          </tr>
+      </table>
+    
+                </td>
+              </tr>
+            
         </tbody>
       </table>
     
