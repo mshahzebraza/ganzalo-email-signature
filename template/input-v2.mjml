@@ -180,12 +180,11 @@
       </mj-group>
     </mj-section>
 
-    <!-- Business Information -->
+    <!-- Locations -->
     <mj-section>
       <mj-column>
-        <!-- Locations -->
         <mj-raw>
-          <table cellpadding="0" cellspacing="0" border="0" style="margin: 8px 0 12px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="margin: 8px 0 4px;">
             <tr>
               {{#each locations}}
                 <td style="white-space: nowrap; padding-right: 8px;">
@@ -198,8 +197,13 @@
             </tr>
           </table>
         </mj-raw>
+      </mj-column>
+    </mj-section>
 
-        <!-- Services -->
+
+    <!-- Services -->
+    <mj-section>
+      <mj-column>
         <mj-raw>
           <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
             <tr>
@@ -211,6 +215,12 @@
             </tr>
           </table>
         </mj-raw>
+      </mj-column>
+    </mj-section>
+
+    <!-- Business Information -->
+    <mj-section>
+      <mj-column>
 
         <!-- Badges -->
         <mj-raw>
