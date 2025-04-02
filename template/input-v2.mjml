@@ -3,9 +3,6 @@
     <!-- Import Google Fonts -->
     <mj-font name="Poppins" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
 
-    <!-- Set custom breakpoint -->
-    <mj-breakpoint width="500px" />
-
     <!-- Global Styles -->
     <mj-attributes>
       <mj-all font-family="Poppins, sans-serif" padding="0" />
@@ -18,11 +15,11 @@
     <mj-attributes>
 
       <!-- Title: 14*1.5=21px -->
-      <mj-class name="title" font-size="22px" font-weight="600" letter-spacing="0.02em" line-height="1.2" padding-bottom="2px" color="#423267" />
+      <mj-class name="title" font-size="20px" font-weight="600" letter-spacing="0.02em" line-height="1.2" padding-bottom="2px" color="#423267" />
       <!-- Subtitle: 8*1.5=12px -->
-      <mj-class name="subtitle" font-size="16px" font-weight="300" line-height="1.2" padding-bottom="2px" color="#8C7AB8" />
+      <mj-class name="subtitle" font-size="15px" font-weight="300" line-height="1.2" padding-bottom="2px" color="#8C7AB8" />
       <!-- Company: 7*1.5=10.5px ~ 11px -->
-      <mj-class name="company" font-size="14px" line-height="1.2" italic color="#EE8C3A" padding-bottom="4px" />
+      <mj-class name="company" font-size="13px" line-height="1.2" italic color="#EE8C3A" padding-bottom="4px" />
 
       <!-- Disclaimer Section -->
       <!-- Warning background color: -->
@@ -139,45 +136,48 @@
   </mj-head>
 
   <!-- ! To Achieve the Left-Aligned Email, the output HTML styles must be updated manually as MJML does not support left-aligned content/email. We just need to remove the auto margin for the container-->
-  <mj-body width="420px">
+  <mj-body width="400px">
 
     <!-- Main Content -->
     <mj-section>
-      <!-- Profile Picture Column -->
-      <mj-column width="100px" vertical-align="top" padding="0" css-class="profile-image">
-        <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
-      </mj-column>
+      <mj-group>
 
-      <!-- Main Content Column -->
-      <mj-column width="75%" vertical-align="top" css-class="basic-content-column">
-        <!-- Basic Info -->
-        <mj-text mj-class="title">
-          {{profile.name}}
-        </mj-text>
+        <!-- Profile Picture Column -->
+        <mj-column width="100px" vertical-align="top" padding="0" css-class="profile-image">
+          <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
+        </mj-column>
 
-        <mj-text mj-class="subtitle">
-          {{profile.title}}
-        </mj-text>
+        <!-- Main Content Column -->
+        <mj-column width="75%" vertical-align="top" css-class="basic-content-column">
+          <!-- Basic Info -->
+          <mj-text mj-class="title">
+            {{profile.name}}
+          </mj-text>
 
-        <mj-text mj-class="company">
-          {{profile.company}}
-        </mj-text>
+          <mj-text mj-class="subtitle">
+            {{profile.title}}
+          </mj-text>
 
-        <!-- Social Icons Row -->
-        <mj-raw>
-          <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              {{#each socialLinks}}
-                <td>
-                  <a href="{{url}}" target="_blank" class="social-icons">
-                    <img src="{{icon}}" alt="{{alt}}" width="24" height="24">
-                  </a>
-                </td>
-              {{/each}}
-            </tr>
-          </table>
-        </mj-raw>
-      </mj-column>
+          <mj-text mj-class="company">
+            {{profile.company}}
+          </mj-text>
+
+          <!-- Social Icons Row -->
+          <mj-raw>
+            <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                {{#each socialLinks}}
+                  <td>
+                    <a href="{{url}}" target="_blank" class="social-icons">
+                      <img src="{{icon}}" alt="{{alt}}" width="24" height="24">
+                    </a>
+                  </td>
+                {{/each}}
+              </tr>
+            </table>
+          </mj-raw>
+        </mj-column>
+      </mj-group>
     </mj-section>
 
     <!-- Business Information -->
