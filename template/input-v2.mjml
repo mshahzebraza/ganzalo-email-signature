@@ -78,7 +78,8 @@
         padding: 2px 4px 2px 7px;
         white-space: nowrap;
         margin-bottom: 6px;
-        margin-right: 8px
+        margin-right: 8px;
+        max-width: 250px;
       }
 
       /* Media Column */
