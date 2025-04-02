@@ -3,6 +3,8 @@
     <!-- Import Google Fonts -->
     <mj-font name="Poppins" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
 
+    <mj-breakpoint width="400px" />
+
     <!-- Global Styles -->
     <mj-attributes>
       <mj-all font-family="Poppins, sans-serif" padding="0" />
@@ -142,7 +144,9 @@
       */
 
       /* Responsive styles for badges section */
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 400px),
+      screen and (max-width: 800px) and (-webkit-min-device-pixel-ratio: 2),
+      screen and (max-width: 800px) and (min-resolution: 192dpi) {
         .awards-column .badge-cell {
           margin-right: 0;
         }
@@ -156,6 +160,10 @@
           width: 100% !important;
           display: block !important;
         }
+
+        /*  .media-column {
+          margin-top: 8px;
+        } */
       }
     </mj-style>
 
@@ -164,7 +172,7 @@
   </mj-head>
 
   <!-- ! To Achieve the Left-Aligned Email, the output HTML styles must be updated manually as MJML does not support left-aligned content/email. We just need to remove the auto margin for the container-->
-  <mj-body width="400px">
+  <mj-body width="400px" background-color="#ffffff">
 
     <!-- Main Content -->
     <mj-section>
@@ -208,6 +216,23 @@
       </mj-group>
     </mj-section>
 
+    <!-- Services -->
+    <mj-section>
+      <mj-column>
+        <mj-raw>
+          <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              {{#each services}}
+                <td class="service-tag">
+                  <span>{{this}}</span>
+                </td>
+              {{/each}}
+            </tr>
+          </table>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+
     <!-- Locations -->
     <mj-section>
       <mj-column>
@@ -228,23 +253,6 @@
       </mj-column>
     </mj-section>
 
-
-    <!-- Services -->
-    <mj-section>
-      <mj-column>
-        <mj-raw>
-          <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              {{#each services}}
-                <td class="service-tag">
-                  <span>{{this}}</span>
-                </td>
-              {{/each}}
-            </tr>
-          </table>
-        </mj-raw>
-      </mj-column>
-    </mj-section>
 
     <!-- Business Information -->
     <mj-section padding-top="12px">
