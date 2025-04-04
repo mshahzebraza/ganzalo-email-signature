@@ -1,3 +1,11 @@
+<!-- 
+Version 2:
+- Responsive
+- Left-aligned
+- Max width 400px
+- Multi-Colored Texts and Backgrounds
+ -->
+
 <mjml>
   <mj-head>
     <!-- Import Google Fonts -->
