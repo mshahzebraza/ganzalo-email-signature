@@ -6,7 +6,7 @@ const Handlebars = require('handlebars');
 const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
 // Read MJML template
-const mjmlTemplate = fs.readFileSync('./template/input-v2.mjml', 'utf8');
+const mjmlTemplate = fs.readFileSync('./template/input-v3.mjml', 'utf8');
 
 // Compile template with Handlebars
 const template = Handlebars.compile(mjmlTemplate);

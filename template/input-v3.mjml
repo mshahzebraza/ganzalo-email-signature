@@ -1,0 +1,298 @@
+<!-- 
+Version 3:
+ -->
+
+<mjml>
+  <mj-head>
+    <!-- Import Google Fonts -->
+    <mj-font name="Poppins" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+
+    <mj-breakpoint width="400px" />
+
+    <!-- Global Styles -->
+    <mj-attributes>
+      <mj-all font-family="Poppins, sans-serif" padding="0" />
+      <mj-text color="#2B2147" align="left" padding="0" />
+      <mj-section padding="0" full-width text-align="left" css-class="left-align-section" />
+      <mj-column padding="0" />
+    </mj-attributes>
+
+    <!-- Information Attributes -->
+    <mj-attributes>
+
+      <!-- Title: 14*1.5=21px -->
+      <mj-class name="title" font-size="20px" font-weight="600" letter-spacing="0.02em" line-height="1.2" padding-bottom="2px" color="#423267" />
+      <!-- Subtitle: 8*1.5=12px -->
+      <mj-class name="subtitle" font-size="14px" font-weight="300" line-height="1.2" padding-bottom="2px" color="#8C7AB8" />
+      <!-- Company: 7*1.5=10.5px ~ 11px -->
+      <mj-class name="company" font-size="13px" line-height="1.2" italic color="#EE8C3A" padding-bottom="4px" />
+
+      <!-- Disclaimer Section -->
+      <!-- Warning background color: -->
+      <mj-class name="disclaimer-section" background-color="hsl(35, 94%, 90%)" padding="0" />
+
+      <mj-class name="disclaimer" font-size="10px" color="hsl(35, 94%, 5%)" line-height="1.25" letter-spacing="0.02em" font-style="italic" padding="4px 6px" />
+    </mj-attributes>
+
+    <!-- Custom CSS -->
+    <mj-style>
+      * {
+        font-family: 'Poppins', sans-serif;
+        /*
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      */
+      }
+
+      .left-align-section {
+        margin: 0 !important;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+
+      /* Service Tag: 5*1.5=7.5px ~ 8px */
+      td.service-tag {
+        white-space: nowrap;
+        padding-right: 8px;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+      }
+
+      td.service-tag span {
+        background-color: #F5F5F5;
+        padding: 2px 6px;
+        color: #2B2147;
+      }
+
+      .location-link {
+        color: #2B2147;
+        text-decoration: none;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+      }
+
+
+      .badge-cell {
+        background-color: #F5F5F5;
+        border: 1px solid #E5E5E5;
+        border-radius: 2px;
+        padding: 2px 4px 2px 7px;
+        white-space: nowrap;
+        margin-bottom: 6px;
+        margin-right: 8px;
+        max-width: 250px;
+      }
+
+      /* Media Column */
+      /* ? Different background color and border color to indicate media links */
+      .media-column .badge-cell {
+        background-color: hsl(219, 60%, 95.50%);
+        border: 1px solid hsl(219, 60%, 80.00%);
+      }
+
+
+      .badge-cell a {
+        text-decoration: underline;
+      }
+
+      .badge-cell a span {
+        text-decoration: underline;
+        color: hsl(219, 60%, 55.50%);
+      }
+
+      .badge-cell img {
+        vertical-align: middle;
+      }
+
+      .badge-cell span {
+        font-size: 10px;
+        color: #2B2147;
+        vertical-align: middle;
+        line-height: 14px;
+        /* Match the icon height */
+        display: inline-block;
+        padding-left: 4px;
+      }
+
+
+      .social-icons {
+        display: inline-block;
+        padding-right: 6px;
+      }
+
+      .social-icons img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .main-table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .disclaimer-wrapper {
+        border: 1px solid hsl(35, 94%, 80%);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+
+      /* Responsive styles for badges section */
+      @media screen and (max-width: 400px),
+      screen and (max-width: 800px) and (-webkit-min-device-pixel-ratio: 2),
+      screen and (max-width: 800px) and (min-resolution: 192dpi) {
+        .badge-cell {
+          margin-right: 0;
+        }
+
+
+        .awards-column,
+        .media-column {
+          width: 100% !important;
+          display: block !important;
+        }
+
+        /*  .media-column {
+          margin-top: 8px;
+        } */
+      }
+    </mj-style>
+
+    <!-- Variables -->
+    <mj-preview>Nouvelle L. Gonzalo - Email Signature</mj-preview>
+  </mj-head>
+
+  <!-- ! To Achieve the Left-Aligned Email, the output HTML styles must be updated manually as MJML does not support left-aligned content/email. We just need to remove the auto margin for the container-->
+  <mj-body width="400px" background-color="#ffffff">
+
+    <!-- Main Content -->
+    <mj-section>
+      <mj-group>
+
+        <!-- Profile Picture Column -->
+        <mj-column width="100px" vertical-align="top" padding="0" css-class="profile-image">
+          <mj-image src="{{profile.photo.url}}" alt="{{profile.photo.alt}}" border-radius="12px" border="1px solid #DCC3A1" padding-right="10px" align="left" />
+        </mj-column>
+
+        <!-- Main Content Column -->
+        <mj-column width="75%" vertical-align="top" css-class="basic-content-column">
+          <!-- Basic Info -->
+          <mj-text mj-class="title">
+            {{profile.name}}
+          </mj-text>
+
+          <mj-text mj-class="subtitle">
+            {{profile.title}}
+          </mj-text>
+
+          <mj-text mj-class="company">
+            {{profile.company}}
+          </mj-text>
+
+          <!-- Social Icons Row -->
+          <mj-raw>
+            <table style="margin-top: 6px;" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                {{#each socialLinks}}
+                  <td>
+                    <a href="{{url}}" target="_blank" class="social-icons">
+                      <img src="{{icon}}" alt="{{alt}}" width="24" height="24">
+                    </a>
+                  </td>
+                {{/each}}
+              </tr>
+            </table>
+          </mj-raw>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Services -->
+    <mj-section>
+      <mj-column>
+        <mj-raw>
+          <table cellpadding="0" cellspacing="0" border="0" style="margin: 12px 0 4px;">
+            <tr>
+              {{#each services}}
+                <td class="service-tag">
+                  <span>{{this}}</span>
+                </td>
+              {{/each}}
+            </tr>
+          </table>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+
+    <!-- Locations -->
+    <mj-section>
+      <mj-column>
+        <mj-raw>
+          <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 6px;">
+            <tr>
+              {{#each locations}}
+                <td style="white-space: nowrap; padding-right: 8px;">
+                  <a href="{{mapUrl}}" class="location-link">
+                    <img src="{{../locationIcon}}" alt="Location" width="10" height="13" style="vertical-align: middle; padding-right: 2px;">
+                    <span>{{name}}</span>
+                  </a>
+                </td>
+              {{/each}}
+            </tr>
+          </table>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+
+
+    <!-- Business Information -->
+    <mj-section padding-top="8px">
+      <!-- Awards Column -->
+      <mj-column css-class="awards-column">
+        <mj-table>
+          <tr>
+            <td>
+              {{#each badges.awards}}
+                <div class="badge-cell">
+                  <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                  <span>{{text}}</span>
+                </div>
+              {{/each}}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+
+      <!-- Media Column -->
+      <mj-column css-class="media-column">
+        <mj-table>
+          <tr>
+            <td>
+              {{#each badges.media}}
+                <div class="badge-cell">
+                  <a href="{{url}}">
+                    <img src="{{icon}}" alt="{{alt}}" width="14" height="14" style="vertical-align: middle; display: inline-block;">
+                    <span>{{text}}</span>
+                  </a>
+                </div>
+              {{/each}}
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- Disclaimer -->
+    <mj-section mj-class="disclaimer-section">
+      <mj-column>
+        <mj-text mj-class="disclaimer">
+          <strong>Disclaimer:</strong> {{disclaimer.text}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
